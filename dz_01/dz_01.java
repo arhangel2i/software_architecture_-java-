@@ -1,7 +1,9 @@
 package dz_01;
 
 public class dz_01 {
+    // Model Store, PoligonalModel (Texture, Poligon), Flash, Camera, Scene
     public static void main(String[] args) {
-        System.out.println("start");
+        ModelStore ms = new ModelStore();
+        System.out.println("Create ModelStore");
     }
 }
