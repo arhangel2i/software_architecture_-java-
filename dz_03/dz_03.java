@@ -71,6 +71,7 @@ class PickUp extends Car implements Refueling, Wiping{
 
     @Override
     public void fuel() {}
+    @Override
     public void wipWindsheild() {}
     @Override
     public void wipWindshield() {}
