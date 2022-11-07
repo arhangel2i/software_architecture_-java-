@@ -63,9 +63,46 @@ abstract class Car{
     public double getEngineCapacity() {return engineCapacity;}
 }
 
-class PickUp extends Car{
+class PickUp extends Car implements Refueling, Wiping{
     private int loadCapacity;
 
     public int getLoadCapacity() {return loadCapacity;}
     public void setLoadCapacity(int loadCapacity){this.loadCapacity=loadCapacity;}
+
+    @Override
+    public void fuel() {}
+    public void wipWindsheild() {}
+    @Override
+    public void wipWindshield() {}
+    @Override
+    public void wipHeadlights() {}
+    @Override
+    public void wipMirrors() {}
+}
+
+class Futere extends Car 
+{
+    Futere()
+    {
+        this.setNumberWheels(3);
+    }
+
+    @Override
+    public void movement()
+    {
+        fly();
+    }
+    public void fly(){
+
+    }
+}
+interface Refueling
+{
+    void fuel();
+}
+interface Wiping
+{
+    void wipWindshield();
+    void wipHeadlights();
+    void wipMirrors();
 }
